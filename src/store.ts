@@ -11,7 +11,7 @@ export type UserStore = {
 // create a store to manage the user state, itself is a hook
 // if we are not using the devtools, we can just use create<UserStore>() instead of create(devtools<UserStore>())
 export const useUserStore = create(
-  devtools<UserStore>(
+  devtools<UserStore>( // devtoll should be the last middleware being wrapped around the store
     (set) => ({
       // set function is used to update the state in the store immutably
       // initial state
