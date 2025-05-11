@@ -9,6 +9,7 @@ export type UserStore = {
 };
 
 // create a store to manage the user state, itself is a hook
+// if we are not using the devtools, we can just use create<UserStore>() instead of create(devtools<UserStore>())
 export const useUserStore = create(
   devtools<UserStore>(
     (set) => ({
@@ -49,6 +50,7 @@ export type PostsStore = {
   removePost: (id: string) => void;
 };
 
+// If we are not using the devtools, we can just use create<PostsStore>() instead of create(devtools<PostsStore>())
 export const usePostStore = create(
   devtools<PostsStore>(
     (set) => ({
